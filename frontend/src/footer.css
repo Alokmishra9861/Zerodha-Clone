@@ -1,0 +1,7 @@
+/* For spacing between links in each column */
+.footer-links a {
+  display: block;
+  margin-bottom: 1px;
+  text-decoration: none;
+  color: #6c757d; /* Matches Bootstrap's text-muted */
+}
