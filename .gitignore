@@ -1,0 +1,31 @@
+# === Node.js ===
+node_modules/
+frontend/node_modules/
+backend/node_modules/
+
+# === Logs ===
+*.log
+npm-debug.log*
+
+# === Env Files ===
+.env
+frontend/.env
+backend/.env
+
+# === Build Output ===
+frontend/build/
+backend/dist/
+dashboard/dist/
+
+# === IDE & OS Specific ===
+.vscode/
+.DS_Store
+Thumbs.db
+
+# === Sensitive Files ===
+backend/util/secretToken.js
+
+# === Optional: Ignore lock files if using yarn or pnpm instead ===
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
