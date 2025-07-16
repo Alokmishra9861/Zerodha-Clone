@@ -10,6 +10,8 @@ const cookieParser = require("cookie-parser");
 const authRoutes = require("./routes/AuthRoutes");
 const cors=require("cors");
 const jwt = require("jsonwebtoken");
+const axios = require("axios"); 
+
 
 
 const PORT=process.env.PORT|| 3002;
