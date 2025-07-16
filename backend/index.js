@@ -9,11 +9,14 @@ const bodyParser=require("body-parser");
 const cookieParser = require("cookie-parser");
 const authRoutes = require("./routes/AuthRoutes");
 const cors=require("cors");
+const jwt = require("jsonwebtoken");
 
 
-const PORT=process.env.PORT || 3002;
+const PORT=process.env.PORT|| 3002;
 const url=process.env.MONGO_URL;
 const app=express();
+axios.defaults.withCredentials = true;
+
 
 app.use(bodyParser.json());
 app.use(cors({
@@ -57,6 +60,20 @@ app.post("/newOrder",async(req,res)=>{
 
 app.use("/", authRoutes);
 
+app.get("/auth/check", (req, res) => {
+  const token = req.cookies.token;
+
+  if (!token) return res.json({ user: null });
+
+  try {
+    const decoded = jwt.verify(token, process.env.JWT_SECRET); // You must have jwt installed
+    res.json({ user: decoded.username }); // or decoded.email, etc.
+  } catch (err) {
+    res.json({ user: null });
+  }
+});
+
+
 app.listen(PORT,()=>{
-    console.log("app is listening");
+    console.log(`app is listening on ${PORT}`);
 })

@@ -69,6 +69,7 @@ const Signup = () => {
             name="email"
             value={email}
             placeholder="Enter your email"
+            autoComplete="email"
             onChange={handleOnChange}
           />
         </div>

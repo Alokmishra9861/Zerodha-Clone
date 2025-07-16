@@ -11,7 +11,7 @@ function Hero() {
 
         <div className="col-4 mt-5 mb-5">
           <img
-            src="Media/images/pricingEquity.svg"
+            src="/Media/images/pricingEquity.svg"
             alt="fund house"
             style={{width:"60%"}}
             className='mt-5'
@@ -26,7 +26,7 @@ function Hero() {
         </div>
         <div className="col-4 mb-5 mt-5 ">
           <img
-            src="Media/images/other-trades.svg"
+            src="/Media/images/other-trades.svg"
             alt="fund house"
             style={{width:"60%"}}
              className='mt-5'
@@ -41,7 +41,7 @@ function Hero() {
         </div>
         <div className="col-4 mt-5 mb-5">
           <img
-            src="Media/images/pricingEquity.svg"
+            src="/Media/images/pricingEquity.svg"
             alt="fund house"
             style={{width:"60%"}}
              className='mt-5'

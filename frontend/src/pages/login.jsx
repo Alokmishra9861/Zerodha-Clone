@@ -12,7 +12,7 @@ const Login = () => {
   const [cookies] = useCookies([]);
   useEffect(() => {
     if (cookies.token) {
-      navigate("/login");
+      navigate("/");
     }
   }, [cookies, navigate]);
 
@@ -80,6 +80,7 @@ const Login = () => {
             name="email"
             value={email}
             placeholder="Enter your email"
+             autoComplete="email"
             onChange={handleOnChange}
           />
         </div>
@@ -90,6 +91,7 @@ const Login = () => {
             name="password"
             value={password}
             placeholder="Enter your password"
+              autoComplete="current-password"
             onChange={handleOnChange}
           />
         </div>

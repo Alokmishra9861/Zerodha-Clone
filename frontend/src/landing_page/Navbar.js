@@ -7,18 +7,18 @@ function Navbar() {
   const navigate = useNavigate();
 
   // Check if user is authenticated
-  useEffect(() => {
-    axios
-      .post("http://localhost:3002", {}, { withCredentials: true })
-      .then((res) => {
-        if (res.data.user) {
-          setUser(res.data.user);
-        } else {
-          setUser(null);
-        }
-      })
-      .catch(() => setUser(null));
-  }, []);
+ useEffect(() => {
+  axios
+    .get("http://localhost:3002/auth/check", { withCredentials: true })
+    .then((res) => {
+      if (res.data.user) {
+        setUser(res.data.user);
+      } else {
+        setUser(null);
+      }
+    })
+    .catch(() => setUser(null));
+}, []);
 
   const handleLogout = () => {
     document.cookie = "token=; Max-Age=0"; // Clear cookie
@@ -33,7 +33,7 @@ function Navbar() {
         {/* Logo */}
         <Link className="navbar-brand d-flex align-items-center" to={"/"}>
           <img
-            src="/media/images/logo.svg"
+            src="/Media/images/logo.svg"
             alt="logo_img"
             style={{ width: "100px", height: "auto" }}
           />
@@ -55,7 +55,7 @@ function Navbar() {
             <li className="nav-item">
               <Link className="nav-link active" to={"/support"}>Support</Link>
             </li>
-
+            
             {!user ? (
               <>
                 <li className="nav-item">

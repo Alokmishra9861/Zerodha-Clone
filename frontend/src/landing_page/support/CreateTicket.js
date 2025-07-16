@@ -15,22 +15,22 @@ function CreateTicket() {
             ></i>
             Account Opening
           </h4>
-          <a href="" style={{textDecoration:"none",lineHeight:"2rem"}} className="mb-5">Resident individual</a><br />
-          <a href="" style={{textDecoration:"none",lineHeight:"2rem"}}>Minor</a><br />
-          <a href="" style={{textDecoration:"none",lineHeight:"2rem"}}>Non Resident Indian (NRI)</a><br />
-          <a href="" style={{textDecoration:"none",lineHeight:"2rem"}}>Company, Partnership, HUF and LLP</a><br />
-          <a href="" style={{textDecoration:"none",lineHeight:"2rem"}}>Glossary</a>
+          <a href="#" style={{textDecoration:"none",lineHeight:"2rem"}} className="mb-5">Resident individual</a><br />
+          <a href="#" style={{textDecoration:"none",lineHeight:"2rem"}}>Minor</a><br />
+          <a href="#" style={{textDecoration:"none",lineHeight:"2rem"}}>Non Resident Indian (NRI)</a><br />
+          <a href="#" style={{textDecoration:"none",lineHeight:"2rem"}}>Company, Partnership, HUF and LLP</a><br />
+          <a href="#" style={{textDecoration:"none",lineHeight:"2rem"}}>Glossary</a>
         </div>
         <div className="col-4 mt-2">
           <h4 className="mt-5 fs-5" style={{fontWeight:"400"}}>
             <i class="fa-solid fa-user" style={{ marginRight: "10px" }}></i>Your
             Zerodha Account
           </h4>
-          <a href="" style={{textDecoration:"none",lineHeight:"2rem",lineHeight:"2rem"}}>Your Profile</a><br />
-          <a href="" style={{textDecoration:"none",lineHeight:"2rem"}} className="mb-5">Account modification</a><br />
-          <a href="" style={{textDecoration:"none",lineHeight:"2rem"}}>Client Master Report (CMR) and Depository Participant (DP)</a><br />
-          <a href="" style={{textDecoration:"none",lineHeight:"2rem"}}>Nomination</a><br />
-          <a href="" style={{textDecoration:"none",lineHeight:"2rem"}}>Transfer and conversion of securities</a>
+          <a href="#" style={{textDecoration:"none",lineHeight:"2rem",lineHeight:"2rem"}}>Your Profile</a><br />
+          <a href="#" style={{textDecoration:"none",lineHeight:"2rem"}} className="mb-5">Account modification</a><br />
+          <a href="#" style={{textDecoration:"none",lineHeight:"2rem"}}>Client Master Report (CMR) and Depository Participant (DP)</a><br />
+          <a href="#" style={{textDecoration:"none",lineHeight:"2rem"}}>Nomination</a><br />
+          <a href="#" style={{textDecoration:"none",lineHeight:"2rem"}}>Transfer and conversion of securities</a>
         </div>
         <div className="col-4  mt-2">
           <h4 className="mt-5 fs-5" style={{fontWeight:"400"}}>

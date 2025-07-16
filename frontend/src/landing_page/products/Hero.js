@@ -8,7 +8,7 @@ function Hero() {
             Zerodha Products
         </h1>
         <h3 className='fs-5 text-muted mb-3'>Sleek, modern, and intuitive trading platforms</h3>
-        <p>Check out our <a href="" style={{textDecoration:"none"}}>investment offerings →</a></p>
+        <p>Check out our <a href="#" style={{textDecoration:"none"}}>investment offerings →</a></p>
       </div>
       </div>
      );

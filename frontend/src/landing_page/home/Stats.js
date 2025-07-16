@@ -7,7 +7,6 @@ function Stats() {
       <div className="row p-5">
         <div className="col-6 p-5">
           <h1 className="mb-5 fs-2">Trust with confidence</h1>
-
           <h2 className="fs-4">Customer-first always</h2>
           <p className="text-muted">
             That's why 1.6+ crore customers trust Zerodha with ~ ₹6 lakh crores
