@@ -9,7 +9,7 @@ function Navbar() {
   // Check if user is authenticated
  useEffect(() => {
   axios
-    .get("http://localhost:3002/auth/check", { withCredentials: true })
+    .get(`${process.env.REACT_APP_API_URL}/auth/check`, { withCredentials: true })
     .then((res) => {
       if (res.data.user) {
         setUser(res.data.user);
