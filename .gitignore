@@ -22,8 +22,6 @@ dashboard/dist/
 .DS_Store
 Thumbs.db
 
-# === Sensitive Files ===
-backend/util/secretToken.js
 
 # === Optional: Ignore lock files if using yarn or pnpm instead ===
 # package-lock.json
