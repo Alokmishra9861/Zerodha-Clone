@@ -2,7 +2,7 @@ const User = require("../model/UserModel");
 const { createSecretToken } = require("../util/secretToken");
 const bcrypt = require("bcrypt");
 
-module.exports.Signup = async (req, res) => {
+exports.Signup = async (req, res) => {
   try {
     const { email, password, username } = req.body;
 
@@ -36,33 +36,45 @@ module.exports.Signup = async (req, res) => {
   }
 };
 
-module.exports.Login = async (req, res) => {
+exports.Login = async (req, res) => {
   try {
     const { email, password } = req.body;
+    console.log("LOGIN TRY:", { email, password });
 
     if (!email || !password) {
-      return res.json({ message: "All fields are required" });
+      console.log("Missing email or password");
+      return res.status(400).json({ message: "Email and password required" });
     }
 
     const user = await User.findOne({ email });
+    console.log("User fetched:", user);
+
     if (!user) {
-      return res.json({ message: "Incorrect password or email" });
+      console.log("User not found");
+      return res.status(401).json({ message: "Invalid credentials" });
     }
 
-    const auth = await bcrypt.compare(password, user.password);
-    if (!auth) {
-      return res.json({ message: "Incorrect password or email" });
+    const isPasswordValid = await bcrypt.compare(password, user.password);
+    console.log("Password valid?", isPasswordValid);
+
+    if (!isPasswordValid) {
+      return res.status(401).json({ message: "Invalid credentials" });
     }
 
     const token = createSecretToken(user._id);
+    console.log("Token created:", token);
+
     res.cookie("token", token, {
-      withCredentials: true,
-      httpOnly: false,
+      httpOnly: true,
+      sameSite: "None",
+      secure: true,
+      maxAge: 3 * 24 * 60 * 60 * 1000,
     });
 
-    return res.status(201).json({ message: "User logged in successfully", success: true });
-  } catch (error) {
-    console.error(error);
+    return res.status(200).json({ success: true, message: "User logged in successfully" });
+
+  } catch (err) {
+    console.error("LOGIN ERROR:", err);
     return res.status(500).json({ message: "Internal server error" });
   }
 };

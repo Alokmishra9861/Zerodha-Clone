@@ -19,10 +19,16 @@ const url=process.env.MONGO_URL;
 const app=express();
 axios.defaults.withCredentials = true;
 
+const allowedOrigins = [
+  'http://localhost:3000', // For local dev
+  "https://zerodha-frontend-omrb.onrender.com"
+];
+
+
 
 app.use(bodyParser.json());
 app.use(cors({
-origin: "http://localhost:3000", // ✅ your frontend
+origin: allowedOrigins,
 credentials: true               // ✅ allow cookies
 }));
     

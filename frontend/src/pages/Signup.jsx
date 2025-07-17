@@ -10,6 +10,9 @@ const Signup = () => {
     password: "",
     username: "",
   });
+
+  const API_URL = process.env.REACT_APP_API_URL;
+
   const { email, password, username } = inputValue;
   const handleOnChange = (e) => {
     const { name, value } = e.target;
@@ -32,7 +35,7 @@ const Signup = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "http://localhost:3002/signup",
+         `${API_URL}/signup`,
         {
           ...inputValue,
         },
