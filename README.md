@@ -1,1 +1,1 @@
-Full stack Trading app ,Replica of ZERODHA
+A Stock Trading Platform using MERN.
