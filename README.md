@@ -2,6 +2,7 @@ A full stack application that replicates the core functionalities of a modern br
 
 
 Tech Stack
+
 Frontend: React.js, Vite
 
 Styling: Tailwind CSS (for a clean, minimalist "Kite" inspired UI)
