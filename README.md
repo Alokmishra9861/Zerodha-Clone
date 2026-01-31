@@ -18,6 +18,7 @@ Real-Time: Socket.io / WebSockets
 Authentication: JWT (JSON Web Tokens)
 
 Key Features
+
 Real-Time Price Updates: Integration with WebSockets (Socket.io) to provide live ticker updates without page refreshes.
 
 Dynamic Dashboard: Overview of market trends, top gainers, and losers.
